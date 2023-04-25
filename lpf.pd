@@ -1,0 +1,19 @@
+#N canvas 388 26 1440 790 10;
+#X obj 961 422 mtof;
+#X floatatom 961 372 5 0 0 0 - Midi_In_Freq -, f 5;
+#X floatatom 951 462 5 0 0 0 - - -, f 5;
+#X obj 110 130 hsl 128 15 0 127 0 0 Midi_In_Freq Midi_IN_CC empty -2
+-8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 930 490 lop~;
+#X obj 870 410 inlet~;
+#X obj 930 540 outlet~;
+#X text 260 130 Low pass Freq;
+#X obj 1111 428 inlet;
+#X obj 1110 510 s Midi_IN_CC;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 1;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 8 0 9 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
